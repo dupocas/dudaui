@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, useState } from 'react'
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { useStyles } from './styles/useStyles'
+
+const styles = {
+    root: {
+        height: '10vh',
+        width: '10vw',
+        backgroundColor: 'blue'
+    }
 }
 
-export default App;
+const App: FC = () => {
+
+    const [counter, setCounter] = useState(0)
+
+    const spawn = () => setCounter(counter + 1)
+
+    return (
+        <div>
+            <button onClick={spawn}>Spawn</button>
+            {
+                Array.from({ length: counter }).fill(0).map((_, i) => (
+                    <Child
+                        key={i}
+                    />
+                ))
+            }
+        </div>
+    )
+}
+
+const Child = () => {
+    const classes = useStyles(styles)
+    return <div className={classes.root}></div>
+}
+
+export default App

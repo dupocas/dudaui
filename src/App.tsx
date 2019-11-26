@@ -1,23 +1,23 @@
 import React, { FC, useState } from 'react'
 
-import { useStyles } from './styles'
+import { makeStyles } from './styles'
 import { Theme } from './theme/types'
 
-const styles = {
+const styles = (theme: Theme) => ({
     root: {
-        backgroundColor: 'blue',
-        height: 200,
-        width: 200,
+        height: 100,
+        width: 100,
+        backgroundColor: theme.palette.danger.main,
         margin: 5
-    },
-    abobrinha: {}
-}
+    }
+})
+const useStyles = makeStyles(styles)
 
 const Child = () => {
-    const classes = useStyles(styles)
+    const classes = useStyles()
 
     return <div className={classes.root}></div>
-} 
+}
 
 const App: FC = () => {
 

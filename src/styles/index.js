@@ -1,1 +1,1 @@
-export { useStyles } from './useStyles'
+export { makeStyles } from './useStyles'

@@ -10,11 +10,11 @@ export interface PalettesDic {
 
 export interface Palette {
     primary: PaletteColor,
-    accent?: PaletteColor,
-    success?: PaletteColor,
-    warning?: PaletteColor,
-    danger?: PaletteColor,
-    default?: PaletteColor
+    accent: PaletteColor,
+    success: PaletteColor,
+    warning: PaletteColor,
+    danger: PaletteColor,
+    default: PaletteColor
 }
 
 export interface Theme {

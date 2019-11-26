@@ -12,5 +12,5 @@ export interface StylesCreator<T> {
 export type Styles<T> = StylesCreator<T> | Classes<T>
 
 export interface GetSheet {
-    (s: any, t?: Theme): StyleSheet<string>
+    (s: any, k: object): StyleSheet<string>,
 }

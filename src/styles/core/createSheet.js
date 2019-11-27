@@ -4,8 +4,8 @@ import { jss } from './jss'
 let specificity = 100000
 
 
-export const createSheet = (styles) => {
+export const createSheet = (styles, link = false) => {
     console.log('creating')
-    const sheet = jss.createStyleSheet(styles, { index: specificity-- })
+    const sheet = jss.createStyleSheet(styles, { index: specificity--, link })
     return sheet
 }

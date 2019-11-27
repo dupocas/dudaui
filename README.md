@@ -96,10 +96,11 @@ const styles = {
 
     foo : ({ color }) => ({ color })
 }
+
 const useStyles = styler(styles)
 
 const Component = ({ color }) =>{
-	const interpolation = { color }
+    const interpolation = { color }
     const classes = useStyles(interpolation)
 
 	return <span className={classes.root}> I'm { color } </span>

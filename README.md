@@ -49,13 +49,13 @@ const Component = () =>{
  - Instantiate `useStyles`
  - Initialize `useStyles`
 
-This can become boring pretty fast 😕! For this we created an alternative API called `styler`
+This can become boring pretty fast 😕! So the most common pattern is to always export the instanciation of `makeStyles`
 
 ```
 //styles.js
-import { styler } from '@dudaui/styles'
+import { makeStyles } from '@dudaui/styles'
  
-export default styler({
+export default makeStyles({
    root:{ backgroundColor : 'red'} 
 })
 ```
@@ -68,7 +68,7 @@ const Component = () =>{
     ...
 }
 ``` 
-Besides reducing your boilerplate `styler` also enhances autocomplete capabilities even from non `.ts / .tsx` files. This can be very useful when using **theming**
+Declaring the styles directly inside `makeStyles` can become pretty handful since it enhances static typing for `Theme`
 ![enter image description here](https://i.imgur.com/vH7QTcl.png)
 
 ### Theming Support

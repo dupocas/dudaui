@@ -1,4 +1,12 @@
-### Duda UI
+
+<p align="center">
+  <img width="180" height="180" src="https://i.imgur.com/y4jhuYG.png">
+</p>
+<h1 align="center">
+  Duda UI
+</h1>
+---
+
 
 Duda UI is a minimalist, `jss` based solution (yes, another one) to style your React components
 

@@ -1,38 +1,46 @@
 {
-  "name": "dudaui",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.23",
-    "@types/node": "12.12.12",
-    "@types/react": "16.9.13",
-    "@types/react-dom": "16.9.4",
-    "jss": "^10.0.0",
-    "jss-preset-default": "^10.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
-    "typescript": "3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "dudaui",
+    "version": "0.0.1",
+    "description": "Minimalist jss style primitives for React",
+    "author": "dupocas <dupocas@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dupocas/dudaui"
+    },
+    "main": "dist/index.js",
+    "typings": "src/index.d.ts",
+    "module": "dist/index.es.js",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.4",
+        "@babel/plugin-transform-arrow-functions": "^7.7.4",
+        "@babel/preset-env": "^7.7.4",
+        "@babel/preset-react": "^7.7.4",
+        "@types/react": "^16.9.15",
+        "@types/react-dom": "^16.9.4",
+        "@typescript-eslint/eslint-plugin": "^2.10.0",
+        "@typescript-eslint/parser": "^2.10.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-react": "^7.17.0",
+        "rollup": "^1.27.8",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-peer-deps-external": "^2.2.0",
+        "rollup-plugin-typescript2": "^0.25.3",
+        "rollup-plugin-url": "^3.0.1",
+        "typescript": "^3.7.3"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "start": "rollup -c -w"
+    },
+    "dependencies": {
+        "jss": "^10.0.0",
+        "jss-preset-default": "^10.0.0"
+    }
 }

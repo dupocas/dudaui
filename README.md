@@ -9,7 +9,7 @@
 
 
 
-Duda UI is a minimalist, `jss` based solution (yes, another one) to style your React components
+Duda UI is a minimalist set of primitives to style your React Components!
 
 
 -   🚀 It's blazing fast.

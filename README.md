@@ -15,7 +15,7 @@ Duda UI is a minimalist set of primitives to style your React Components!
 -   🚀 It's blazing fast.
 -   ⚡️ Powered by  [JSS](https://github.com/cssinjs/jss)
 - 📦 Less than 12 KB gzipped
-- 🌀 A single static sheet is shared across multiple instances
+- 🌀 Static styles are shared across components
 - ✒️ Theming support
 - 💎 Dynamic styles updates based on props and state
 

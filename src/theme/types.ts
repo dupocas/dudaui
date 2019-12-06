@@ -1,12 +1,17 @@
-export interface PaletteColor {
-    main: string,
-    dark?: string,
-    light?: string
+export interface CreateTheme {
+    (options: ThemeOptions | undefined): Theme
 }
 
-export interface PalettesDic {
-    [index: string]: Palette
+export interface ThemeOptions {
+    palette: Palette | undefined,
+    typography: Typography | undefined
 }
+
+export interface Theme {
+    palette: Palette,
+    typography: Typography
+}
+
 
 export interface Palette {
     primary: PaletteColor,
@@ -17,10 +22,12 @@ export interface Palette {
     default: PaletteColor
 }
 
-export interface Theme {
-    palette: Palette
+export interface PaletteColor {
+    main: string,
+    light?: string,
+    dark?: string
 }
 
-export interface GetTheme {
-    (variant: string): Theme
+export interface Typography {
+    fontFamily: string
 }

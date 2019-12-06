@@ -26,7 +26,11 @@ export default {
         babel({
             exclude: 'node_modules/**',
             presets: ['@babel/env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-arrow-functions']
+            plugins: [
+                '@babel/plugin-transform-arrow-functions',
+                '@babel/plugin-syntax-jsx',
+                '@babel/plugin-proposal-class-properties'
+            ]
         }),
         resolve(),
         typescript({

@@ -4,19 +4,19 @@ import { useEffect, useMemo, useContext } from 'react'
 import { SheetsManager, StyleSheet, getDynamicStyles } from 'jss'
 import { Classes, GetSheet, Styles } from '../types'
 import context from '../theme/context'
+import { Theme } from '../theme/types'
 
 //A manager is created for each component's type
 //If X instances of this component are active then manager.size = X
 const manager = new SheetsManager()
 
-
 //Core style solution
 export const makeStyles = <T>(styles: Styles<T>) => {
     //Since styles can be a function we need this to keep a stable signature across instances
     const key = {}
-    
+
     return (interpolation: object = {}) => {
-        const { theme } = useContext(context)
+        const theme = useContext<Theme>(context)
 
         //First we compute the original styles object
         const computed = useMemo(() => {

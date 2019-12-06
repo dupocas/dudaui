@@ -5,7 +5,6 @@ let specificity = 100000
 
 
 export const createSheet = (styles, link = false) => {
-    console.log('creating')
     const sheet = jss.createStyleSheet(styles, { index: specificity--, link })
     return sheet
 }

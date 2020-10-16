@@ -116,8 +116,3 @@ const Component = ({ color }) =>{
 }
 ```
 Notice that this can generate performance problems, since a new dynamic sheet is created for each component's instance (and updated on each render)
-
-### Disclaimer
-This isn't a library ready for production, at least not right now. Despite beeing used in all my projects it still misses some core features like support for **server side rendering** and the entire test suit (almost done). So for now, don't use it. Still under development...
-
-### Roadmap

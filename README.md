@@ -18,7 +18,7 @@ Duda UI is a minimalist set of primitives to style your React Components!
 - 🌀 Static styles are shared across components
 - ✒️ Theming support
 - 💎 Dynamic styles updates based on props and state
-
+- 🏆 SSR Out of the box
 
 ### Installation
 ```
